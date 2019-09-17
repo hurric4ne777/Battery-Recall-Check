@@ -11,7 +11,7 @@ import json
 import uuid
 import csv
 
-file = "/path/to/serials.csv"
+file = "C:/Scripting/Python/MacBattery/assets.csv"
 
 computer_list = []
 
@@ -42,6 +42,8 @@ with open(file) as csv_file:
 
 for computer in computer_list:
     if computer["Status"] == "Eligible":
-        print("Computer Name: {}").format(computer["Computer_Name"])
-        print("Serial Number: {}").format(computer["Serial"])
-        print("===================")
+        print ("{}".format(computer['Computer_Name']), end =", ")
+        print ("{}".format(computer['Serial']), end =", ")
+        print ("{}".format(computer['Status']))
+
+print("===================")
